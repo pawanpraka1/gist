@@ -33,7 +33,7 @@ int main()
 		perror("connect");
 		exit(0);
 	}
-	sleep (1);
+	sleep (1); // wait for server to be blocked on read
 	while (1) {
 		if(-1 == send(sock, MSG, sizeof(MSG), 0)) {
 			perror("send");
